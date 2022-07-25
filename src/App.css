@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+  transition: all .3s ease-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color:#f5f2ea;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  background-color: #fdc886;
+  padding: 1em 5%;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header p{
+  color: rgb(75,75,75);
+  font-weight: 600;
+}
+
+.main{
+  width: 100%;
+  padding: 2em 5%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:32px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos de task form */
+
+.task-form, .task{
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: white;
+
+  border-radius:10px;
+  width: 270px;
+  height: 312px;
+  padding: 1.5em;
+  display:flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-form h3{
+  color: rgb(60,60,60);
+  font-weight: 600;
+  margin-bottom:1em;
+}
+
+.task-form input, .task-form select{
+  border: 1px solid #f0e8e8;
+  padding: 1em;
+  margin-bottom:1em;
+  border-radius:10px;
+}
+
+.task-form button{
+  border: 1px solid #f0e8e8;
+  padding: 1em;
+  border:none;
+  border-radius:10px;
+  background-color: #fdc886;
+  font-weight:600;
+  color: rgb(60,60,60);
+  cursor:pointer;
+}
+
+.task-form button:hover{
+  background-color: #f9d2a2;
+}
+
+/* Estilos del componente Task */
+
+.task h4{
+  font-weight: 600;
+  margin-bottom:0.25em;
+}
+
+.task button{
+  font-weight: 600;
+  color: rgb(244 63 94);
+  border:none;
+  cursor: pointer;
+  padding: 0.5em 0.75em;
+  border-radius:10px;
+  background:white;
+}
+
+.task span{
+  padding:0.25em 1em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size:0.8em;
+  font-weight: 600;
+}
+
+.task .task-head{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+/* Prioridad */
+
+/* Baja */ 
+.baja{
+  background-color: rgb(94 234 212);
+}
+
+.baja h4{
+  color: rgb(70,70,70);
+}
+
+.baja p{
+  color: rgb(80,80,80);
+}
+
+.baja span{
+  background-color: rgb(13 148 136);
+  color:rgb(94 234 212);
+}
+
+
+/* Media */
+
+.media{
+  background-color: rgb(253 230 138);
+}
+
+.media h4{
+  color: rgb(70,70,70);
+}
+
+.media p{
+  color: rgb(80,80,80);
+}
+
+.media span{
+  background-color: rgb(251 191 36);
+  color:rgb(253 230 138);
+}
+
+
+/* Alta */
+
+.alta{
+  background-color: rgb(251 113 133);
+}
+
+.alta h4{
+  color: rgb(70,70,70);
+}
+
+.alta p{
+  color: rgb(80,80,80);
+}
+
+.alta span{
+  background-color: rgb(225 29 72);
+  color:rgb(251 113 133);
 }
